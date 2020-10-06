@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- MANIFEST FOR PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- ios support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00FFFF">
+  <meta name="apple-mobile-web-app-title" content="SpeechToText">
+  <meta name="application-name" content="Speech to Text transcriptions">
+  <link rel="apple-touch-icon" href="/images/icon-128x128.png">
+  <link rel="apple-touch-icon" href="/images/icon-144x144.png">
+  <link rel="apple-touch-icon" href="/images/icon-152x152.png">
+  <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+  <link rel="apple-touch-icon" href="/images/icon-256x256.png">
+  <link rel="apple-touch-icon" href="/images/icon-512x512.png">
+  <meta name="description" content="Speech to text transcription for different languages">
+  <meta name="theme-color" content="#00FFFF">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- css stylesheets and links for FontAwesome and jQuery -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Speech app</title>
+</head>
+<body>
+
+  <div class="content">
+
+
+    <h1>Speech to text transcription for different languages</h1>
+    <p class="descr">Please click the microphone and dictate the text you want to have transcribed. At the end click the microphone
+    again to stop the recording.</p>
+
+    <div class="obj">
+      <div class="button" id="circlein">
+        <i class="fa fa-microphone"></i>
+      </div>
+    </div>
+
+    <div class="language_choser">
+      <label for="language">Please choose your language of voice input:</label>
+      <select name="language" id="language">
+        <option value="en-GB">English (UK)</option selected>
+        <option value="de-DE">German</option>
+        <option value="it-IT">Italian</option>
+        <option value="es-ES">Spanish</option>
+      </select>
+    </div>
+
+    <div class="words">
+      <div class="btns">
+        <button class="btnIcon copy">
+          <i class="fa fa-copy copy-icon"></i>
+          <span class="copyText">Copy</span>
+        </button>
+        <button class="btnIcon delete">
+          <i class="fa fa-trash"></i>
+          <span class="copyText">Delete</span>
+        </button>
+      </div>
+      <label for="transcr" class="label-transcr">Transcription:</label>
+      <input type="text" class="transcr" readonly></input>
+    </div>
+
+
+  </div>
+
+
+  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
